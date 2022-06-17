@@ -15,7 +15,7 @@ import pandas as pd
 
 import subprocess
 from feature_extarction import *
-
+import argparse
 
 
 # os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID";
@@ -116,5 +116,23 @@ def site_predictor(input_ID):
     return "", seq , out
 
 
-input_ID=input('give protien id and chain : example 3zeuD\n')
-error,seq,pred=site_predictor(input_ID)
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-p", "--protein", type = str, help = "PDBID (e.g. 3zeu)")
+    parser.add_argument("-c", "--chain", type = str, help = "chain identifier(e.g D)")
+    args = parser.parse_args()
+    if args.chain == None:
+        print("Chain identifier is not provided!")
+    elif args.chain not in list(string.ascii_letters + string.digits):
+        print("Invalid chain identifier!")
+    else: # input by PDBID
+        if args.protein == None or len(args.protein) != 4:
+            print("Invalid PDB ID!")
+        else:
+            print(args.protein + args.chain)
+            error,seq,pred=site_predictor(args.protein + args.chain )
+    if error !='':
+        print(error)
+    else:
+        print(seq)
+        print(pred)
