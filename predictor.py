@@ -116,8 +116,5 @@ def site_predictor(input_ID):
     return "", seq , out
 
 
-input_ID='3zeuD'
-# input_ID=input('give protien id and chain : example 3zeuD\n')
-
-# input_ID='6dhsC'
+input_ID=input('give protien id and chain : example 3zeuD\n')
 error,seq,pred=site_predictor(input_ID)
