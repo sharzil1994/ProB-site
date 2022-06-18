@@ -25,8 +25,7 @@ To run full version of  the ProB-site, it requires following software to extract
   
   From link [DSSP](https://github.com/cmbi/dssp) download dssp-3.1.4.tar.gz  
   unzip it using command  
-  ```tar -zxvf dssp-3.1.4.tar.gz 
-  ```  
+  ```tar -zxvf dssp-3.1.4.tar.gz```  
   compile the program using follwoing command  
   ```cd dssp-3.1.4  
   ./autogen.sh  
