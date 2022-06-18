@@ -15,7 +15,8 @@ To run full version of  the ProB-site, it requires following software to extract
 # Built software and Database
 * Install DSSP  
   install libraries  
-  ```sudo apt-get install libboost-all-dev  
+  ```
+  sudo apt-get install libboost-all-dev  
   sudo apt-get install -y libz-dev  
   sudo apt-get install -y libbz2-dev  
   sudo apt-get install -y automake  
@@ -27,7 +28,8 @@ To run full version of  the ProB-site, it requires following software to extract
   unzip it using command  
   ```tar -zxvf dssp-3.1.4.tar.gz```  
   compile the program using follwoing command  
-  ```cd dssp-3.1.4  
+  ```
+  cd dssp-3.1.4  
   ./autogen.sh  
   ./configure  
   make 
@@ -52,13 +54,15 @@ To run full version of  the ProB-site, it requires following software to extract
   [uniclust_uniprot_mapping.tsv.gz](link: http://gwdu111.gwdg.de/~compbiol/uniclust/2017_10/)  
 
    unzip downloaded file
-   ```tar -zxvf uniref30_2017_10.tar.gz
+   ```
+   tar -zxvf uniref30_2017_10.tar.gz
    tar -zxvf uniclust30_2017_10_hhsuite.tar.gz
    tar -zxvf uniclust_uniprot_mapping.tsv.gz
    ```  
    The output of above commands will give the HH-Suite Database  
    Pre-requisits, install following dependencies  
-   ```sudo apt install pigz
+   ```
+   sudo apt install pigz
    sudo apt install libopenmpi-dev
    sudo apt install sed
    sudo apt install md5deep
@@ -69,7 +73,8 @@ To run full version of  the ProB-site, it requires following software to extract
    sudo apt-get install tar 
    ```
    install HH-suite software using follwing commands  
-   ```git clone https://github.com/soedinglab/hh-suite.git
+   ```
+   git clone https://github.com/soedinglab/hh-suite.git
    mkdir -p hh-suite/build && cd hh-suite/build
    cmake -DCMAKE_INSTALL_PREFIX=. ..
    make -j 4 && make install
@@ -78,7 +83,8 @@ To run full version of  the ProB-site, it requires following software to extract
    Here hhsuite-3.0.3/build/bin/hhblits is HHsutie software path   
  * Updating software and data bases path in software  
    In software open featuer_extarction.py and update paths according to your device  
-   ```In line 33 give correct path to data_path='./data_ext/'  
+   ```
+   In line 33 give correct path to data_path='./data_ext/'  
    In line 38 give correct path to dssp = Software_path + "dssp-3.1.4/mkdssp"  
    In line 42 give correct path to PSIBLAST = Software_path + "ncbi-blast-2.13.1+/bin/psiblast"  
    In line 46 give correct path to HHBLITS = Software_path + "hhsuite-3.0.3/bin/hhblits"  
@@ -86,7 +92,8 @@ To run full version of  the ProB-site, it requires following software to extract
    In line 53 give correct path to HHDB = "./uniclust30_2017_10"
    ```  
    In software open prediction.py and update paths according to your device  
-   ``` In line 28 give correct path to path='./Feature/'  
+   ```
+   In line 28 give correct path to path='./Feature/'  
    In line 60 give correct path to path='./data_ext/'  
    ```
 
