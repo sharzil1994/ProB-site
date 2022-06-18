@@ -99,4 +99,4 @@ we have provided pre-computed feature and a pretrained model for those intereste
 List of Dataset used in this research in present in Featrues/data_seq folder  
 Features are stored in numpy format  
 Program can be run using pre-computed features without installing Blast+, HH-suite, 
-and DSSP software. However binding sites of proteins present in pre-computed features list can be predicted.
+and DSSP software. However binding sites of proteins present in pre-computed features list can only be predicted
