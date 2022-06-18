@@ -29,30 +29,30 @@ def feature_extraction(Input_ID):
     
     error_code_dic = {"PDB not exist": 1, "chain not exist": 2,  "DSSP too long": 3, "Fail to pad DSSP": 4,"software path error":5, "database path error" : 6}
     
+    #Add path here accoding to your device
+    data_path='./data_ext/' #output folder path for features
+    Software_path = "./"    
+    dssp = Software_path + "dssp-3.1.4/mkdssp" #dssp software folder path for features extraction
+    PSIBLAST = Software_path + "ncbi-blast-2.13.1+/bin/psiblast" #PSIBLAST software folder path for features extraction
+    HHBLITS = Software_path + "hhsuite-3.0.3/build/bin/hhblits" #HH-SUITE software folder path for features extraction
+    UR90 = "./unirefdb/uniref90.fasta" #database for pssm path #PSIBLAST DATABASE folder path for features extraction
+    HHDB = "./uniclust30_2017_10" #database hmm path #HH-SUITE DATABASE folder path for features extraction
     
-    data_path='./data_ext/'
-    
-    
-    Software_path = "./"
-    
-    dssp = Software_path + "dssp-3.1.4/mkdssp"
     if os.path.exists(dssp) == False:
         return  error_code_dic["software path error"],""
-    
-    PSIBLAST = Software_path + "ncbi-blast-2.13.1+/bin/psiblast"
-    
+
     if os.path.exists(PSIBLAST) == False:
-        return  error_code_dic["software path error"],""
-    HHBLITS = Software_path + "hhsuite-3.0.3/bin/hhblits"
+        return  error_code_dic["software path error"],""    
     
     if os.path.exists(HHBLITS) == False:
         return  error_code_dic["software path error"],""
-    UR90 = "./unirefdb/uniref90.fasta" #database for pssm path
+    
     if os.path.exists(UR90) == False:
         return  error_code_dic["database path error"],""
-    HHDB = "./uniclust30_2017_10" #database hmm path
+   
     if os.path.exists(HHDB) == False:
         return  error_code_dic["database path error"] ,""  
+    
     def pdb_extract(datapath,pdbid,chain):
         ID=pdbid + chain
         if os.path.exists(data_path + "{}.pdb.gz".format(pdbid)) == False:
