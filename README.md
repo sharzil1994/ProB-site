@@ -20,16 +20,16 @@ To run full version of  the ProB-site, it requires following software to extract
   sudo apt-get install -y libbz2-dev  
   sudo apt-get install -y automake  
   sudo apt-get install -y autotools-dev  
-  sudo apt-get install -y autoconf```
+  sudo apt-get install -y autoconf ```
   
   From link [DSSP](https://github.com/cmbi/dssp) download dssp-3.1.4.tar.gz  
   unzip it using command  
-  ```tar -zxvf dssp-3.1.4.tar.gz```  
+  ```tar -zxvf dssp-3.1.4.tar.gz ```  
   compile the program using follwoing command  
   ```cd dssp-3.1.4  
   ./autogen.sh  
   ./configure  
-  make```
+  make ```
   
 
 
