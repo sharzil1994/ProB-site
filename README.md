@@ -78,15 +78,17 @@ To run full version of  the ProB-site, it requires following software to extract
    Here hhsuite-3.0.3/build/bin/hhblits is HHsutie software path   
  * Updating software and data bases path in software  
    In software open featuer_extarction.py and update paths according to your device  
-   In line 33 give correct path to data_path='./data_ext/'  
+   ```In line 33 give correct path to data_path='./data_ext/'  
    In line 38 give correct path to dssp = Software_path + "dssp-3.1.4/mkdssp"  
    In line 42 give correct path to PSIBLAST = Software_path + "ncbi-blast-2.13.1+/bin/psiblast"  
    In line 46 give correct path to HHBLITS = Software_path + "hhsuite-3.0.3/bin/hhblits"  
    In line 50 give correct path to UR90 = "./unirefdb/uniref90.fasta"   
-   In line 53 give correct path to HHDB = "./uniclust30_2017_10"  
+   In line 53 give correct path to HHDB = "./uniclust30_2017_10"
+   ```  
    In software open prediction.py and update paths according to your device  
-   In line 28 give correct path to path='./Feature/'  
+   ```In line 28 give correct path to path='./Feature/'  
    In line 60 give correct path to path='./data_ext/'  
+   ```
 
 # Run ProB-site for prediction
 For prediction of binding site in a protein run following command:  
