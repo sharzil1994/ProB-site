@@ -31,7 +31,8 @@ To run full version of  the ProB-site, it requires following software to extract
   ./autogen.sh  
   ./configure  
   make 
-  ```
+  ```  
+  Here dssp-3.1.4/mkdssp is DSSP software path  
 * Install Blast+ and database  
   download [uniref90.fasta.gz](link: https://ftp.uniprot.org/pub/databases/uniprot/uniref/uniref90/)  
   unzip downloaded niref90.fasta.gz file  
@@ -40,7 +41,10 @@ To run full version of  the ProB-site, it requires following software to extract
   unzip ncbi-blast-2.13.0+-x64-linux.tar.gz  
   ```tar -zxvf ncbi-blast-2.13.0+-x64-linux.tar.gz```  
   In created folder run following command, making sure ./uniref90.fasta proper path is given  
-  ```./ncbi-blast-2.13.0+/bin/makeblastdb -in ./uniref90.fasta -parse_seqids -blastdb-version 5 -title "unirefdb" -dbtype prot```
+  ```./ncbi-blast-2.13.0+/bin/makeblastdb -in ./uniref90.fasta -parse_seqids -blastdb-version 5 -title "unirefdb" -dbtype prot``` 
+  The output of makeblastbd command will give the PSIBlast Database  
+  Here ncbi-blast-2.10.1+/bin/psiblast is PSIBLAST software path   
+  
 * Install HH-suite and database  
    
   download [uniclust30_2017_10.tar.gz](link: http://gwdu111.gwdg.de/~compbiol/uniclust/2017_10/) and 
@@ -51,7 +55,8 @@ To run full version of  the ProB-site, it requires following software to extract
    ```tar -zxvf uniref30_2017_10.tar.gz
    tar -zxvf uniclust30_2017_10_hhsuite.tar.gz
    tar -zxvf uniclust_uniprot_mapping.tsv.gz
-   ```
+   ```  
+   The output of above commands will give the HH-Suite Database
    prerequisits, install following dependencies  
    ```sudo apt install pigz
    sudo apt install libopenmpi-dev
@@ -69,8 +74,19 @@ To run full version of  the ProB-site, it requires following software to extract
    cmake -DCMAKE_INSTALL_PREFIX=. ..
    make -j 4 && make install
    export PATH="$(pwd)/bin:$(pwd)/scripts:$PATH"
-   ```
-  
+   ``` 
+   Here hhsuite-3.0.3/build/bin/hhblits is HHsutie software path   
+ * Updating software and data bases path in software  
+   In software open featuer_extarction.py and update paths according to your device  
+   In line 33 give correct path to data_path='./data_ext/'  
+   In line 38 give correct path to dssp = Software_path + "dssp-3.1.4/mkdssp"  
+   In line 42 give correct path to PSIBLAST = Software_path + "ncbi-blast-2.13.1+/bin/psiblast"  
+   In line 46 give correct path to HHBLITS = Software_path + "hhsuite-3.0.3/bin/hhblits"  
+   In line 50 give correct path to UR90 = "./unirefdb/uniref90.fasta"   
+   In line 53 give correct path to HHDB = "./uniclust30_2017_10"  
+   In software open prediction.py and update paths according to your device  
+   In line 28 give correct path to path='./Feature/'  
+   In line 60 give correct path to path='./data_ext/'  
 
 # Run ProB-site for prediction
 For prediction of binding site in a protein run following command:  
