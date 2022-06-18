@@ -25,8 +25,10 @@ import argparse
 
 def site_predictor(input_ID):
     error_code_dic = {1:"PDB not exist", 2:"chain not exist", 3: "DSSP too long",4: "Fail to pad DSSP",5:"software path error", 6:"database path error" }
-    path='./Feature/'
+    pre_path='./Feature/' # change path according to your device(pre computed features)
+    fea_path='./data_ext/' #change path according to your device(path of computed features)
     seq=""
+    path=pre_path
     with open(f'{path}/data_seq/data_ID.dat','rb') as FH:
         data0 =pickle.load(FH)
         
@@ -57,7 +59,7 @@ def site_predictor(input_ID):
         if error!=0:
             return error_code_dic[error],'',''
         
-        path='./data_ext/'
+        path=fea_path
         tEMP_0=np.load(f'{path}pssm/{input_ID}.npy')
         tEMP_1=np.load(f'{path}dssp/{input_ID}.npy')
         tEMP_2=np.load(f'{path}hhm/{input_ID}.npy')
