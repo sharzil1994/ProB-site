@@ -86,7 +86,7 @@ To run full version of  the ProB-site, it requires following software to extract
    In line 53 give correct path to HHDB = "./uniclust30_2017_10"
    ```  
    In software open prediction.py and update paths according to your device  
-   ```In line 28 give correct path to path='./Feature/'  
+   ``` In line 28 give correct path to path='./Feature/'  
    In line 60 give correct path to path='./data_ext/'  
    ```
 
