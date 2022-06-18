@@ -50,7 +50,7 @@ def feature_extraction(Input_ID):
     UR90 = "./unirefdb/uniref90.fasta" #database for pssm path
     if os.path.exists(UR90) == False:
         return  error_code_dic["database path error"],""
-    HHDB = "/uniclust30_2017_10" #database hmm path
+    HHDB = "./uniclust30_2017_10" #database hmm path
     if os.path.exists(HHDB) == False:
         return  error_code_dic["database path error"] ,""  
     def pdb_extract(datapath,pdbid,chain):
