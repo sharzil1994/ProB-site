@@ -32,7 +32,7 @@ To run full version of  the ProB-site, it requires following software to extract
   ./configure  
   make 
   ```
-* Install Blast+ and database
+* Install Blast+ and database  
     download [uniref90.fasta.gz](link: https://ftp.uniprot.org/pub/databases/uniprot/uniref/uniref90/)  
     unzip downloaded niref90.fasta.gz file  
     ```gzip -d uniref90.fasta.gz```  
@@ -41,7 +41,7 @@ To run full version of  the ProB-site, it requires following software to extract
     ```tar -zxvf ncbi-blast-2.13.0+-x64-linux.tar.gz```  
     In created folder run following command, making sure ./uniref90.fasta proper path is given  
    ```./ncbi-blast-2.13.0+/bin/makeblastdb -in ./uniref90.fasta -parse_seqids -blastdb-version 5 -title "unirefdb" -dbtype prot```
-* Install HH-suite and database
+* Install HH-suite and database  
    
    download [uniclust30_2017_10.tar.gz](link: http://gwdu111.gwdg.de/~compbiol/uniclust/2017_10/) and 
    [uniclust30_2017_10_hhsuite.tar.gz](link: http://gwdu111.gwdg.de/~compbiol/uniclust/2017_10/) and   
