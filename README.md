@@ -56,8 +56,8 @@ To run full version of  the ProB-site, it requires following software to extract
    tar -zxvf uniclust30_2017_10_hhsuite.tar.gz
    tar -zxvf uniclust_uniprot_mapping.tsv.gz
    ```  
-   The output of above commands will give the HH-Suite Database
-   prerequisits, install following dependencies  
+   The output of above commands will give the HH-Suite Database  
+   Pre-requisits, install following dependencies  
    ```sudo apt install pigz
    sudo apt install libopenmpi-dev
    sudo apt install sed
