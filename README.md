@@ -99,7 +99,7 @@ To run full version of  the ProB-site, it requires following software to extract
 
 # Run ProB-site for prediction
 For prediction of binding site in a protein run following command:  
-``` python Prediction.py -p 3zeu -c D ```  
+``` python Predictor.py -p 3zeu -c D ```  
 Here 3zeu is PDB_ID and D is chain of that PDB_ID, program will download necessary PDB file from online database  
 # Data, feature and model
 we have provided pre-computed feature and a pretrained model for those interested in reproducing the paper  
