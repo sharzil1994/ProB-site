@@ -36,7 +36,7 @@ def feature_extraction(Input_ID):
     PSIBLAST = Software_path + "ncbi-blast-2.13.1+/bin/psiblast" #PSIBLAST software folder path for features extraction
     HHBLITS = Software_path + "hhsuite-3.0.3/build/bin/hhblits" #HH-SUITE software folder path for features extraction
     UR90 = "./unirefdb/uniref90.fasta" #database for pssm path #PSIBLAST DATABASE folder path for features extraction
-    HHDB = "./uniclust30_2017_10" #database hmm path #HH-SUITE DATABASE folder path for features extraction
+    HHDB = "./uniclust30/uniclust30_2017_10/uniclust30_2017_10" #database hmm path #HH-SUITE DATABASE folder path for features extraction
     
     if os.path.exists(dssp) == False:
         return  error_code_dic["software path error"],""
