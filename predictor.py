@@ -133,8 +133,8 @@ if __name__ == '__main__':
         else:
             print(args.protein + args.chain)
             error,seq,pred=site_predictor(args.protein + args.chain )
-    if error !='':
-        print(error)
-    else:
-        print(seq)
-        print(pred)
+        if error !='':
+            print(error)
+        else:
+            print(seq)
+            print(pred)
