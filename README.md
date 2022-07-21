@@ -108,14 +108,14 @@ Features are stored in numpy format
 Program can be run using pre-computed features without installing Blast+, HH-suite, 
 and DSSP software. However binding sites of proteins present in pre-computed features list can only be predicted
 # Cite
-For citation use the given BibTeX format
-@article{khan2022prob,
-  title={ProB-Site: Protein Binding Site Prediction Using Local Features},
-  author={Khan, Sharzil Haris and Tayara, Hilal and Chong, Kil To},
-  journal={Cells},
-  volume={11},
-  number={13},
-  pages={2117},
-  year={2022},
-  publisher={MDPI}
+For citation use the given BibTeX format  
+@article{khan2022prob,  
+  title={ProB-Site: Protein Binding Site Prediction Using Local Features},  
+  author={Khan, Sharzil Haris and Tayara, Hilal and Chong, Kil To},  
+  journal={Cells},  
+  volume={11},  
+  number={13},  
+  pages={2117},  
+  year={2022},  
+  publisher={MDPI}  
 }
